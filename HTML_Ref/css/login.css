@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+nav {
+    background-color: #EE8820;
+
+}
+ nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
+    list-style-type: none;
+}
+  nav ul > li > a {
+    display: block;
+	padding: 0.4em;
+    text-decoration: none;
+    color: #242222;
+    font-weight: bold;
+}
+
+
+footer {
+    background-color: #EE8820; 
+    
+}
+
+.logo {
+    width: 20%;
+}
+ /* ************************************************************************ */
+                                 /* Nav-Final */
+ /* ************************************************************************ */
+
+ body {
+    font-family: 'Vollkorn', serif;
+    background-color: #AF2178;
+    text-align: center;
+    font-size: 1em;
+    margin: 0;
+    height: 100%;
+}
+
+main {
+    width: 100%;
+    align-self: center;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+footer {
+    width: 100%;
+}
+
+
+h2 {
+    padding: 30px 0;
+    padding:  0 0 20px 0;
+    color: #000000;
+    text-shadow: 
+    -1px  -1px 0 #0000,
+    1px -1px 0 #0000,
+    -1px  -1px 0 #0000,
+    1px -1px 0 #0000;
+}
+form * {
+    margin: 5px 0;
+    text-align: center;
+    overflow: hidden;
+    font-size:  1.2em;
+}
+
+
+form input, form select {
+    width:  30%;
+    height: 25px;
+    border: none;
+    text-align: center;
+    padding: 0 2px;
+    border-radius: 3em;
+}
+
+form label {
+    color: #000000;
+    font-weight: bold;
+}
+
+ form input[type="submit"] {
+    background-color: #0000;
+    border: 1px solid #0000;
+    color: #000000;
+    margin:  20px 0;
+    height: 2em;
+    border-radius: 3px;
+    font-weight: bold;
+    text-align: center;
+ }

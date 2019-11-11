@@ -1,0 +1,68 @@
+﻿
+@{
+    var nomeView = (string) VieWData["NomeView"]
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="Roletop.css" />
+    <title>pagina inicial</title>
+    <link href="https://fonts.googleapis.com/css?family=Vollkorn&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Vollkorn&display=swap" rel="stylesheet">
+    @if(!"Home" .Equals(nomeView))
+    {
+
+    }
+
+</head>
+<body>
+
+    <header>
+    <div> &nbsp;</div>
+
+        
+        <section>
+            <div id= "logo-area" >
+                <img src="logo.png" >
+            </div>
+        </section>
+        <br />
+        <nav>
+            
+
+        <div class="menu-nav">
+            <nav>
+            <ul>
+            
+                <li><a href="roletop.html"> Home</a></li>
+                <li><a href="roletopgaleria.html">Galeria</a></li>
+                <li><a href="agenda.html"> Agenda</a></li>
+                <li><a href="quem somos.html">Quem Somos</a></li>
+                <li><a href="Contato">Contato</a></li>
+                <li><a href="login.html"> Login</a></li>
+            
+            </ul>
+        </nav>
+        </div>
+        @if("Home".Equals(nomeView))
+        {
+            Html.RenderPartial("_HeaderHomePage");
+        }
+    </header>
+            @RenderBody()
+        
+        <footer>
+        <address>
+                Avenida de Limeira, 539 - Campos Elíseos - SP
+                <br/>
+                11 1234 6789
+                <br />
+        </address>
+        <a href="#"> Voltar para o topo !</a>
+    </footer>
+</body>
+</html>

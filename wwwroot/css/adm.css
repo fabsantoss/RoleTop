@@ -1,0 +1,149 @@
+/* ************************************************* */
+                    /* Nac-inicio */
+/* ********************************************** */
+
+*{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    font-family: 'Vollkorn', serif;
+    background-color: #AF2178;
+  
+    
+}
+main {
+    height: 100%;
+}
+
+#logo-area > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    
+}
+
+footer{
+    background-color: #EE8820;
+  
+     
+}
+
+html {
+    height: 50%;
+}
+
+   
+nav {
+    background-color: #EE8820;
+    
+}
+ nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em;
+    list-style-type: none;
+    height: 50%;
+}
+  nav ul > li > a {
+    display: block;
+	padding: 0.4em;
+    text-decoration: none;
+    color: #242222;
+    font-weight: bold;
+}
+/* ****************************************** */
+                /* Nave-Final */
+/* **************************************** */
+
+
+main {
+    width: 90%;
+}
+
+h2 {
+    font-size: 1.8em;
+    text-align: center;
+}
+
+h3 {
+    padding: 0.5em 0;
+    font-size: 1.3em;
+    color:#EE8820;
+    text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+     1px  1px 0 #000;
+     text-align: center;
+     
+}
+
+table {
+    text-align: center;
+    color: #000;
+    border: 1px dashed #EE8820;
+    width: 100%;
+    padding: 5px;
+    word-break: normal;
+}
+
+table th {
+    background-color:#EE8820;
+}
+
+table a {
+    text-decoration: none;
+    color: #000;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+tfoot td {
+    text-align: center;
+    color: #000;
+    background-color: #EE8820;
+}
+
+thead > tr:first-child > th:last-child {
+    padding: 0 .5em;
+}
+
+
+h4 {
+    padding: 0.5em 0;
+    font-size: 1.3em;
+    color:#EE8820;
+    text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+     1px  1px 0 #000;
+     text-align: center;
+}
+
+#eventos {
+    text-align: center;
+    color: #000;
+    border: 1px dashed #EE8820;
+    width: 100%;
+    padding: 5px;
+    word-break: normal;
+}
+
+#realizados {
+    text-align: center;
+    color: #000;
+    border: 1px dashed #EE8820;
+    width: 100%;
+    padding: 5px;
+    word-break: normal;
+}
