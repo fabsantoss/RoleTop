@@ -1,0 +1,54 @@
+<main>
+                <h2>Cadastre-se</h2>
+                
+                <form method="POST" action='@Url.Action("CadastrarCliente", "Cadastro")'>
+                    
+                <div>
+                    <label for="nome">Nome</label>
+                    <br />
+                    <input id="nome" type="text" maxlength="20" minlength="3" name="nome" />
+                </div>
+
+                
+                <div>
+                    <label for="sobrenome">Sobrenome</label>
+                    <br>
+                    <input id="Sobrenome" type="text" maxlength="20" minlength="3" name="Sobrenome" />
+                </div>
+
+                
+                <div>
+                    <label for="email">E-mail</label>
+                    <br />
+                    <input id="email" type="email"  maxlength="20" minlength="3" name="email"/>
+                </div>
+
+                <div>
+                    <label for="senha">Senha</label>
+                    <br />
+                    <input id="senha" type="password"  maxlength="20" minlength="6" name="senha" />
+                </div>
+
+                <div>
+                    <label for="confirma senha">confirma senha</label>
+                    <br />
+                    <input id="confirma senha" type="password"  maxlength="20" minlength="3" name="confirma senha"/>
+                </div>
+
+                <div>
+                    <label for="Telefonel">Telefone</label>
+                    <br/>
+                    <input id="Telefone" type="text"  maxlength="20" minlength="3" name="telefone"/>
+                </div>
+
+                <div>
+                    <label for="Data-Nascimento">Data de Nascimento</label>
+                    <br />
+                    <input id="Data-Nascimento" type="date" maxlength="20" minlength="3" name="Data-Nascimento"/>
+                </div>
+                
+                
+                <input type="submit" value="Finalizar cadastro">
+            
+            </form>
+                </main>
