@@ -11,7 +11,7 @@
 body {
     font-family: 'Vollkorn', serif;
     background-color: #AF2178;
-  
+
     
 }
 main {
@@ -28,20 +28,18 @@ main {
 
 footer{
     background-color: #EE8820;
-  
-     
 }
 
 html {
     height: 50%;
 }
 
-   
+
 nav {
     background-color: #EE8820;
     
 }
- nav ul {
+nav ul {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;

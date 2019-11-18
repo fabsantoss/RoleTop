@@ -98,9 +98,9 @@ form label {
     background-color: #0000;
     border: 1px solid #0000;
     color: #000000;
-    margin:  20px 0;
-    height: 2em;
-    border-radius: 3px;
+    margin: 5px 0;
+    height: 3em;
+    
     font-weight: bold;
     text-align: center;
  }

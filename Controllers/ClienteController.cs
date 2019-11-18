@@ -1,14 +1,18 @@
 using System;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace RoleTopMVC.Controllers
 {
     public class ClienteController : Controller
     {
+        [HttpGet]
         public IActionResult Login()
         {
             return View();
         }
+
+        [HttpPost]
 
         public IActionResult Login(IFormCollection form)
         {
@@ -19,7 +23,7 @@ namespace RoleTopMVC.Controllers
                 System.Console.WriteLine(form["senha"]);
                 System.Console.WriteLine("****************");
 
-                return View("Sucesso")
+                return View("Sucesso");
             }
             catch (Exception e)
             {

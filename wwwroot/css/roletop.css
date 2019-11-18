@@ -61,19 +61,19 @@ footer {
   /* ************************************************************************************* */
                                 /* NAV-FINAL */
   /* ************************************************************************************* */
- 
+
 #local > div {
     
-    width: 45%;
+    width: 30%;
     padding: 2em;
     
 }
 
 
 #mapa {
-   flex-direction: row;
-   width: 50%;
-   align-items: center;
+flex-direction: row;
+width: 50%;
+align-items: center;
 
 }
 
