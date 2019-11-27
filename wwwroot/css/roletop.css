@@ -62,13 +62,6 @@ footer {
                                 /* NAV-FINAL */
   /* ************************************************************************************* */
 
-#local > div {
-    
-    width: 30%;
-    padding: 2em;
-    
-}
-
 
 #mapa {
 flex-direction: row;
@@ -84,6 +77,15 @@ a {
     list-style-type: none;
 }
 
+.Eventos > img {
+    display: flex;
+    justify-content: right;
+}
+
+.Espaco > img {
+    display: flex;
+    justify-content: left;
+}
 
 
 
