@@ -80,11 +80,6 @@ form input, form select {
     padding: 0 2px;
 }
 
-
-
-
-
-
-.descrição {
-    
+textarea {
+    width: 20%;
 }
