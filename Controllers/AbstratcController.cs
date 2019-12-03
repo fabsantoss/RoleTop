@@ -8,10 +8,10 @@ namespace RoleTopMVC.Controllers
         protected const string SESSION_CLIENTE_NOME = "nome_cliente";
         protected string ObterUsuarioSession()
         {
-            var usuario =  HttpContext.Session.GetString(SESSION_CLIENTE_EMAIL);
-            if(!string.IsNullOrEmpty(usuario))
+            var email =  HttpContext.Session.GetString(SESSION_CLIENTE_EMAIL);
+            if(!string.IsNullOrEmpty(email))
             {
-                return usuario;
+                return email;
             }
             else
             {
@@ -21,10 +21,10 @@ namespace RoleTopMVC.Controllers
 
         protected string ObterUsuarioNomeSession()
         {
-            var nomeUsuario = HttpContext.Session.GetString(SESSION_CLIENTE_NOME);
-            if(!string.IsNullOrEmpty(nomeUsuario))
+            var nome = HttpContext.Session.GetString(SESSION_CLIENTE_NOME);
+            if(!string.IsNullOrEmpty(nome))
             {
-                return nomeUsuario;
+                return nome;
             }
             else
             {

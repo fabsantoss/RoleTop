@@ -2996,6 +2996,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\52655460812\\Documents\\RoleTopMVC\\Views\\AreaDoCliente\\Cliente.cshtml",
+      "TargetPath": "Views\\AreaDoCliente\\Cliente.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\52655460812\\Documents\\RoleTopMVC\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
@@ -3003,6 +3008,11 @@
     {
       "FilePath": "c:\\Users\\52655460812\\Documents\\RoleTopMVC\\Views\\QuemSomos\\informacoes.cshtml",
       "TargetPath": "Views\\QuemSomos\\informacoes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\52655460812\\Documents\\RoleTopMVC\\Views\\Cliente\\HistoricoEvento.cshtml",
+      "TargetPath": "Views\\Cliente\\HistoricoEvento.cshtml",
       "FileKind": "mvc"
     },
     {

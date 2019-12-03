@@ -1,21 +1,33 @@
 using System;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RoleTopMVC.Repositories;
+using RoleTopMVC.ViewModels;
 
 namespace RoleTopMVC.Controllers
 {
-    public class ClienteController : Controller
+    public class ClienteController : AbstratcController
     {
+            private ClienteRepository clienteRepository = new ClienteRepository();
+
+            private EventoRepository eventoRepository = new EventoRepository();
+
         [HttpGet]
         public IActionResult Login()
         {
-            return View();
+            return View(new BaseViewModel()
+            {
+                NomeView = "Login",
+                UsuarioEmail = ObterUsuarioSession(),
+                UsuarioNome = ObterUsuarioNomeSession()
+            });
         }
 
         [HttpPost]
 
         public IActionResult Login(IFormCollection form)
         {
+            ViewData["Action"] = "Login";
             try
             {
                 System.Console.WriteLine("****************");
@@ -23,7 +35,29 @@ namespace RoleTopMVC.Controllers
                 System.Console.WriteLine(form["senha"]);
                 System.Console.WriteLine("****************");
 
-                return View("Sucesso");
+                var usuario = form["email"];
+                var senha = form["senha"];
+
+                var cliente = clienteRepository.ObterPor(usuario);
+
+                if(cliente != null)
+                {
+                    if(cliente.Senha.Equals(senha))
+                    {
+                        HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
+                        HttpContext.Session.SetString(SESSION_CLIENTE_NOME, cliente.Nome);
+
+                        return RedirectToAction("HistoricoEvento", "Cliente");
+                    }
+                    else
+                    {
+                        return View("Erro", new RespostaViewModel("Senha incorreta"));
+                    }
+                }
+                else
+                {
+                    return View("Erro", new RespostaViewModel($"Usuário {usuario} não encontrado"));
+                }
             }
             catch (Exception e)
             {
@@ -31,6 +65,20 @@ namespace RoleTopMVC.Controllers
                 return View("Erro");
             }
         }
-        
+
+        public IActionResult HistoricoEvento()
+        {
+            var emailCliente = ObterUsuarioSession();
+            var eventosCliente = eventoRepository.ObterTodosPorCliente(emailCliente);
+
+            return View (new HistoricoVIewModel()
+            {
+                Eventos = eventosCliente,
+                NomeView = "HistoricoEvento",
+                UsuarioEmail = ObterUsuarioSession(),
+                UsuarioNome = ObterUsuarioNomeSession()
+            });
+        }
+
     }
 }
