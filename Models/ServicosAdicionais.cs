@@ -1,9 +1,15 @@
 namespace RoleTopMVC.Models
 {
-    public class ServicosAdicionais
+    public class ServicosAdicionais : Evento
     {
-        public string Som {get;set;}
-        public string Iluminacao{get;set;}
+        public ServicosAdicionais()
+        {
 
+        }
+        public ServicosAdicionais(string nome, double preco)
+        {
+            this.Nome = nome;
+            this.Preco = preco;
+        }
     }
 }

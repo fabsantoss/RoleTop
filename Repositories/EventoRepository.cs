@@ -56,20 +56,30 @@ namespace RoleTopMVC.Repositories
                 evento.Cliente.Nome = ExtrairValorDoCampo("cliente_nome", linha);
                 evento.Cliente.Telefone = ExtrairValorDoCampo("cliente_telefone", linha);
                 evento.Cliente.Email = ExtrairValorDoCampo("cliente_email", linha);
+                evento.Nome = ExtrairValorDoCampo("nome", linha);
+                evento.TiposDeEvento.Preco = double.Parse(ExtrairValorDoCampo("tipos_de _evento_preco", linha));
+                evento.TiposDeEvento.Nome = ExtrairValorDoCampo("tipos_de _evento_nome", linha);
+                evento.ServicosAdicionais.Nome =ExtrairValorDoCampo("servicos_adicionais_nome",linha);
+                evento.ServicosAdicionais.Preco =double.Parse(ExtrairValorDoCampo("servicos_adicionais_preco", linha));
+                evento.DataEvento = DateTime.Parse(ExtrairValorDoCampo("data_evento",linha));
+                evento.DescricaoEvento = ExtrairValorDoCampo("descrição_evento",linha);
+                evento.FormaDePagamento = ExtrairValorDoCampo("forma_de_pagamento",linha);
                 
-                
-
                 eventos.Add(evento);
             }
             return eventos;
         }
-
+//Colocar a parte de atualizar//
+//NAO esuqecer de terminar//
         private string PrepararEventoCSV (Evento evento)
         {
             Cliente c = evento.Cliente;
+            ServicosAdicionais s = evento.ServicosAdicionais;
+            TiposDeEvento t = evento.TiposDeEvento;
 
 
-            return ();
+
+            return $"id={evento.Id};status_evento={evento.Status};cliente_nome={c.Nome};cliente_telefone={c.Telefone};cliente_email={c.Email};evento_nome={evento.Nome};tipos_de _evento_nome={evento.TiposDeEvento.Nome};tipos_de _evento_precos={evento.TiposDeEvento.Preco}ervicos_adicionais_nome={evento.ServicosAdicionais.Nome};servicos_adicionais_preco{evento.ServicosAdicionais.Preco}data_evento={evento.DataEvento};descrição_evento={evento.DescricaoEvento};forma_de_pagamento={evento.FormaDePagamento}";
         }
 
         

@@ -5,7 +5,7 @@ namespace RoleTopMVC.Controllers
     public class AbstratcController : Controller
     {
         protected const string SESSION_CLIENTE_EMAIL = "cliente_email";
-        protected const string SESSION_CLIENTE_NOME = "nome_cliente";
+        protected const string SESSION_CLIENTE_NOME = "cliente_nome";
         protected string ObterUsuarioSession()
         {
             var email =  HttpContext.Session.GetString(SESSION_CLIENTE_EMAIL);

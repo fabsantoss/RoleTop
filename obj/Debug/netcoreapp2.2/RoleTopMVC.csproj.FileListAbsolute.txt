@@ -35,4 +35,5 @@ C:\Users\52655460812\Documents\RoleTopMVC\obj\Debug\netcoreapp2.2\RoleTopMVC.csp
 C:\Users\52655460812\Documents\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_HeaderHomePage.g.cshtml.cs
 C:\Users\52655460812\Documents\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Galeria\Fotos.g.cshtml.cs
 C:\Users\52655460812\Documents\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\QuemSomos\informacoes.g.cshtml.cs
-C:\Users\52655460812\Documents\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Evento\Index.g.cshtml.cs
+C:\Users\52655460812\Documents\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Cliente\EventoCadastro.g.cshtml.cs
+C:\Users\52655460812\Documents\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Cliente\HistoricoEvento.g.cshtml.cs
