@@ -3,13 +3,13 @@ using RoleTopMVC.ViewModels;
 
 namespace RoleTopMVC.Controllers
 {
-    public class GaleriaController : Controller
+    public class ContatoController :Controller
     {
-        public IActionResult Fotos()
+        public IActionResult info()
         {
             return View(new BaseViewModel()
             {
-            NomeView= "Galeria"
+                NomeView ="Contato"
             });
         }
     }

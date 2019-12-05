@@ -18,6 +18,19 @@ namespace RoleTopMVC.Controllers
         {
             EventoViewModel evm = new EventoViewModel();
             evm.TiposDeEvento = tiposDeEventoRepository.ObterTodos();
+            
+            var UsuarioEmail = ObterUsuarioSession();
+            if (!string.IsNullOrEmpty(UsuarioEmail))
+            {
+                evm.cliente = clienteRepository.ObterPor(UsuarioEmail);
+            }
+
+            var nomeUsuario = ObterUsuarioNomeSession();
+            if (!string.IsNullOrEmpty(nomeUsuario))
+            {
+                evm.NomeCliente = nomeUsuario;
+            }
+
             var usuarioLogado = ObterUsuarioSession();
             var nomeUsuarioLogado = ObterUsuarioNomeSession();
             if (!string.IsNullOrEmpty(nomeUsuarioLogado))
@@ -32,10 +45,12 @@ namespace RoleTopMVC.Controllers
             }
 
             evm.NomeView = "Evento";
-            evm.UsuarioEmail = usuarioLogado;
-            evm.UsuarioNome = nomeUsuarioLogado;
+            evm.UsuarioEmail = ObterUsuarioSession();
+            evm.UsuarioNome = ObterUsuarioNomeSession();
 
             return View (evm);
         }
+
+        
         }
     }

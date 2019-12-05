@@ -1,6 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RoleTopMVC.Enums;
 using RoleTopMVC.Repositories;
 using RoleTopMVC.ViewModels;
 
@@ -44,10 +45,21 @@ namespace RoleTopMVC.Controllers
                 {
                     if(cliente.Senha.Equals(senha))
                     {
-                        HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
-                        HttpContext.Session.SetString(SESSION_CLIENTE_NOME, cliente.Nome);
-
+                        switch (cliente.TipoUsuario)
+                        {
+                            case (uint) TiposUsuario.CLIENTE:
+                            HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
+                            HttpContext.Session.SetString(SESSION_CLIENTE_NOME, cliente.Nome);
+                            HttpContext.Session.SetString(SESSION_CLIENTE_TIPO, cliente.TipoUsuario.ToString());
                         return RedirectToAction("HistoricoEvento", "Cliente");
+                            
+                            default:
+                            HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
+                            HttpContext.Session.SetString(SESSION_CLIENTE_NOME, cliente.Nome);
+                            HttpContext.Session.SetString(SESSION_CLIENTE_TIPO, cliente.TipoUsuario.ToString());
+                            return RedirectToAction("Dashboard", "Administrador");
+                        }
+
                     }
                     else
                     {
@@ -66,9 +78,9 @@ namespace RoleTopMVC.Controllers
             }
         }
 
-        public IActionResult HistoricoEvento()
+        public IActionResult Usuario()
         {
-            var emailCliente = ObterUsuarioSession();
+            var emailCliente = HttpContext.Session.GetString(SESSION_CLIENTE_EMAIL);
             var eventosCliente = eventoRepository.ObterTodosPorCliente(emailCliente);
 
             return View (new HistoricoVIewModel()

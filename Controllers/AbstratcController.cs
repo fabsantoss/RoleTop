@@ -6,6 +6,8 @@ namespace RoleTopMVC.Controllers
     {
         protected const string SESSION_CLIENTE_EMAIL = "cliente_email";
         protected const string SESSION_CLIENTE_NOME = "cliente_nome";
+
+        protected const string SESSION_CLIENTE_TIPO = "cliente_tipo";
         protected string ObterUsuarioSession()
         {
             var email =  HttpContext.Session.GetString(SESSION_CLIENTE_EMAIL);
@@ -30,7 +32,19 @@ namespace RoleTopMVC.Controllers
             {
                 return "";
             }
-        
+        }
+
+        protected string ObterUsuariotipoSession()
+        {
+            var tipousuario = HttpContext.Session.GetString(SESSION_CLIENTE_TIPO);
+            if (!string.IsNullOrEmpty(tipousuario))
+            {
+                return tipousuario;
+            }
+            else
+            {
+                return "";
+            }
         }
     }
 }

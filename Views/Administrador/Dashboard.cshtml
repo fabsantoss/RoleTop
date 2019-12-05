@@ -1,51 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="~/css/adm.css" />
-    <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
-    <title>adiministrador</title>
-    <link href="https://fonts.googleapis.com/css?family=Vollkorn&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Bitter|Vollkorn&display=swap" rel="stylesheet">
-    
-</head>
-<body>
-
-        <footer>
-                <div> &nbsp; </div>
-            </footer>
-            
-                <header>
-            
-                    
-                    <section>
-                        <div id= "logo-area" >
-                            <img src="logo.png" >
-                        </div>
-                    </section>
-                    <br />
-                    <nav>
-                        
-            
-                    <div class="menu-nav">
-                        <nav>
-                        <ul>
-                        
-                            <li><a href="roletop.html"> Home</a></li>
-                            <li><a href="roletopgaleria.html">Galeria</a></li>
-                            <li><a href="agenda.html"> Agenda</a></li>
-                            <li><a href="quem somos.html">Quem Somos</a></li>
-                            <li><a href="Contato.html">Contato</a></li>
-                            <li><a href="login.html"> Login</a></li>
-                        
-                        </ul>
-                    </nav>
-                    </div>
-                </header>
-
-                <main>
+@model RoleTopMVC.ViewModels.DashboardViewModel
+<main>
                     <h2>Administrador</h2>
                     <section id="informacoes dos eventos">
                         <h3>Informações dos eventos</h3>
@@ -64,7 +18,7 @@
                             <tfoot>
                                 <tr>
                                     <td colspan="8">
-                                        <p>Eventos atualizados em 19/09/2019 às 7:41</p>
+                                        <p>Eventos atualizados em @DateTime.Now</p>
                                     </td>
                                 </tr>
                             </tfoot>
@@ -102,9 +56,9 @@
                         </table>
                     </section>
     
-                </main>
+                
 
-                <main>
+                
                         <section id="eventosrealizados">
                             <h4>Eventos realizados</h4>
                             <table id="realizados">
@@ -118,7 +72,7 @@
                                 <tfoot>
                                     <tr>
                                         <td colspan="8">
-                                            <p>Eventos atualizados em 16/09/2019 às 7:41</p>
+                                            <p>Eventos atualizados em @DateTime.Now</p>
                                         </td>
                                     </tr>                           
                                 </tfoot>
@@ -143,10 +97,10 @@
         
                             </table>                   
                         </section>
-                    </main>
+                    
         
 
-                <main>
+                
                 <section id="eventos aceitos e recusados">
                     <h4>Eventos aceitos e recusados</h4>
                     <table id="eventos">
@@ -162,7 +116,7 @@
                         <tfoot>
                             <tr>
                                 <td colspan="8">
-                                    <p>Eventos atualizados em 29/09/2019 às 7:41</p>
+                                    <p>Eventos atualizados em @DateTime.Now</p>
                                 </td>
                             </tr>                           
                         </tfoot>
@@ -186,25 +140,8 @@
                                 <td>Corporativo</td>
                                 <td><a href="#"><i class="fas fa-times"></i></a></td>                             
                             </tr>
-
-                        
                         </tbody>
 
                     </table>                   
                 </section>
             </main>
-
-                <footer>                   
-                        <address>
-                                Avenida de Limeira, 539 - Campos Elíseos - SP
-                                <br/>
-                                11 1234 6789
-                                <br />
-                        </address>
-                        <a href="#"> Voltar para o topo !</a>
-                    </footer>
-
-            
-    
-</body>
-</html>

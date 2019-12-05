@@ -1,4 +1,8 @@
+@model RoleTopMVC.ViewModels.RespostaViewModel
 <main>
-    <h2> @ViewData["Action"] realizado com sucesso!
+    <h2> @Model.NomeView realizado com sucesso!
     </h2>
-</main>    
+    <p>
+        @Model.Mensagem
+    </p>
+</main>      

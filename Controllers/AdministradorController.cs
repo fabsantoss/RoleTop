@@ -11,6 +11,13 @@ namespace RoleTopMVC.Controllers
 
         public IActionResult Dashboard()
         {
+            var ninguemLogado = string.IsNullOrEmpty(ObterUsuariotipoSession());
+
+            if (!ninguemLogado && (uint) TiposUsuario.ADMINISTRADOR == uint.Parse(ObterUsuariotipoSession()))
+            {
+                
+            
+
             var eventos = eventosRepository.ObterTodos();
             DashboardViewModel dashboardViewModel = new DashboardViewModel();
             
@@ -34,6 +41,15 @@ namespace RoleTopMVC.Controllers
             dashboardViewModel.UsuarioEmail = ObterUsuarioSession();
 
             return View(dashboardViewModel);
+            }
+            else
+            {
+                return View ("Erro", new RespostaViewModel()
+                {
+                    NomeView = "Dashboard",
+                    Mensagem = "Você não tem permissão para acessar o Dasboard"
+                });
+            }
         }
     }
 }

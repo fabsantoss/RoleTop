@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    font-family: 'Vollkorn', serif;
+    background-color: #AF2178;
+
+    
+}
+main {
+    height: 100%;
+}
+
+#logo-area > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    
+}
+
+footer{
+    background-color: #EE8820;
+}
+
+html {
+    height: 50%;
+}
+
+
+nav {
+    background-color: #EE8820;
+    
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em;
+    list-style-type: none;
+    height: 50%;
+}
+nav ul > li > a {
+    display: block;
+	padding: 0.4em;
+    text-decoration: none;
+    color: #242222;
+    font-weight: bold;
+}

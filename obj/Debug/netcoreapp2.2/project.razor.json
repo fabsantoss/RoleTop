@@ -2961,11 +2961,6 @@
   "RootNamespace": "RoleTopMVC",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\52655460812\\Documents\\RoleTopMVC\\Views\\Cliente\\EventoCadastro.cshtml",
-      "TargetPath": "Views\\Cliente\\EventoCadastro.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\52655460812\\Documents\\RoleTopMVC\\Views\\Shared\\_CookieConsentPartial.cshtml",
       "TargetPath": "Views\\Shared\\_CookieConsentPartial.cshtml",
       "FileKind": "mvc"
@@ -3001,6 +2996,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\52655460812\\Documents\\RoleTopMVC\\Views\\Contato\\Info.cshtml",
+      "TargetPath": "Views\\Contato\\Info.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\52655460812\\Documents\\RoleTopMVC\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
@@ -3011,6 +3011,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\52655460812\\Documents\\RoleTopMVC\\Views\\Administrador\\Dashboard.cshtml",
+      "TargetPath": "Views\\Administrador\\Dashboard.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\52655460812\\Documents\\RoleTopMVC\\Views\\Cliente\\HistoricoEvento.cshtml",
       "TargetPath": "Views\\Cliente\\HistoricoEvento.cshtml",
       "FileKind": "mvc"
@@ -3018,6 +3023,11 @@
     {
       "FilePath": "c:\\Users\\52655460812\\Documents\\RoleTopMVC\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\52655460812\\Documents\\RoleTopMVC\\Views\\Cliente\\Usuario.cshtml",
+      "TargetPath": "Views\\Cliente\\Usuario.cshtml",
       "FileKind": "mvc"
     },
     {

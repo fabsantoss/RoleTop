@@ -1,1 +1,2 @@
-nome=manuel;email=manuel@gmail.com;senha=fabi123;telefone=1188888;Data-Nascimento=01/08/2009 00:00:00;
+tipo_usuario=0nome=Administrador;email=Adm@gmail.com;senha=Administrador123;telefone=1111111111111;Data-Nascimento=20/01/1999 00:00:00;
+tipo_usuario=1nome=babi;email=babi@gmail.com;senha=babi123;telefone=1188888;Data-Nascimento=07/11/2002 00:00:00;

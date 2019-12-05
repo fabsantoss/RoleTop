@@ -11,6 +11,8 @@ namespace RoleTopMVC.Models
 
         public DateTime DataNascimento {get;set;}
 
+        public uint TipoUsuario {get;set;}
+
         public Cliente()
         {
 
