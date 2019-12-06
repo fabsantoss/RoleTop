@@ -10,10 +10,10 @@ namespace RoleTopMVC.Controllers
         protected const string SESSION_CLIENTE_TIPO = "cliente_tipo";
         protected string ObterUsuarioSession()
         {
-            var email =  HttpContext.Session.GetString(SESSION_CLIENTE_EMAIL);
-            if(!string.IsNullOrEmpty(email))
+            var usuario =  HttpContext.Session.GetString(SESSION_CLIENTE_EMAIL);
+            if(!string.IsNullOrEmpty(usuario))
             {
-                return email;
+                return usuario;
             }
             else
             {

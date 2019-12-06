@@ -1,18 +1,15 @@
-@model RoleTopMVC.ViewModels.EventoViewModel
+@model RoleTopMVC.ViewModels.UsuarioViewModel
+@{
+    ViewData["Title"] = "Evento - RoleTop";
+}
 <main>
-                    <h2>Minha Conta, @Model.NomeCliente!</h2>
+                    <h2>Minha Conta!</h2>
                         <br />
                         <div class="meu evento">
                                 <a href="meuevento.html#meu evento">Meu evento</a>
-
                             </div>
                             <br />
-                        <div class="cadastrar meu evento">
-                                <a href="cadastrodoevento.html#cadastrar meu evento">Cadastrar meu evento:</a>                               
-                        </div>
-                            
                         
-
             <form method="POST" action='@Url.Action("Registrar", "Cliente")'>
 
                 <div>
@@ -25,31 +22,15 @@
                 <label for="Tipo de eventos">Tipo de eventos</label>
                 <br />
                     <select id='select' name='select'>
-                    <option value=''>Selecione</option>
-                    <option value='div1'>Casamento</option>
-                    <option value='div2'>Aniversário</option>
-                    <option value='div3'>Shows</option>
-                    <option value='div4'>Corporativos</option>
+                    <option value="" disabled selected>Selecione</option>
                     </select>  
+                    @foreach (var tiposDeEvento in Model.TiposDeEventos)
+                    {
+                        <option value="@tiposDeEvento.Nome">@tiposDeEvento.Nome por @tiposDeEvento.Preco</option>
+                    }
                     
-                <div id="eventos">
-                    <div id="div1">
-                        Casamento
-                    </div>
-
-                    <div id="div2">
-                        Aniversário                     
-                    </div>
-
-                    <div id="div3">
-                        Shows                      
-                    </div>
-
-                    <div id="div4">
-                        Corporativos                       
-                    </div>
-                </div>    
-            
+                
+                <br />
                     <label for="descricao">Descrição do evento:</label>
                     <br/>
                     <textarea name="descricao" id="descricao" cols="10" rows="5"  placeholder="Descrição do evento"  style="width: 20em "></textarea>
@@ -69,9 +50,12 @@
                     <br />
 
                 <select id='select' name='select'>
-                    <option value=''>Selecione</option>
-                    <option value='div1'>Som</option>
-                    <option value='div2'>Iluminação</option>                                     
+                    <option value="" disabled selected>Selecione</option>
+                    @foreach (var servicosAdicionais in Model.ServicosAdicionais)
+                    {
+                        <option value="@servicosAdicionais.Nome">@servicosAdicionais.Nome por @servicosAdicionais</option>
+                    }
+                                            
                     </select>  
 
 

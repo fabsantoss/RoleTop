@@ -3016,13 +3016,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\52655460812\\Documents\\RoleTopMVC\\Views\\Cliente\\HistoricoEvento.cshtml",
-      "TargetPath": "Views\\Cliente\\HistoricoEvento.cshtml",
+      "FilePath": "c:\\Users\\52655460812\\Documents\\RoleTopMVC\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\52655460812\\Documents\\RoleTopMVC\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FilePath": "c:\\Users\\52655460812\\Documents\\RoleTopMVC\\Views\\Historico\\HistoricoEvento.cshtml",
+      "TargetPath": "Views\\Historico\\HistoricoEvento.cshtml",
       "FileKind": "mvc"
     },
     {

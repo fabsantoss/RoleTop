@@ -5,9 +5,10 @@ namespace RoleTopMVC.Repositories
         protected string ExtrairValorDoCampo(string nomeCampo, string linha)
         {
             var Chave = nomeCampo;
+            
             var indiceChave = linha.IndexOf(Chave);
 
-            var indiceTerminal = linha.IndexOf(",", indiceChave);
+            var indiceTerminal = linha.IndexOf(";", indiceChave);
 
             var valor = "";
 
@@ -20,7 +21,7 @@ namespace RoleTopMVC.Repositories
                 valor = linha.Substring(indiceChave);
             }
             System.Console.WriteLine($"Campo: {nomeCampo} e valor {valor}");
-            return valor.Replace(nomeCampo +"=", "");
+            return valor.Replace(nomeCampo + "=", "");
         }
     }
 }

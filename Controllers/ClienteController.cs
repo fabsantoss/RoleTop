@@ -51,7 +51,7 @@ namespace RoleTopMVC.Controllers
                             HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
                             HttpContext.Session.SetString(SESSION_CLIENTE_NOME, cliente.Nome);
                             HttpContext.Session.SetString(SESSION_CLIENTE_TIPO, cliente.TipoUsuario.ToString());
-                        return RedirectToAction("HistoricoEvento", "Cliente");
+                        return RedirectToAction("Usuario", "Cliente");
                             
                             default:
                             HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
@@ -83,10 +83,10 @@ namespace RoleTopMVC.Controllers
             var emailCliente = HttpContext.Session.GetString(SESSION_CLIENTE_EMAIL);
             var eventosCliente = eventoRepository.ObterTodosPorCliente(emailCliente);
 
-            return View (new HistoricoVIewModel()
+            return View (new UsuarioViewModel()
             {
                 Eventos = eventosCliente,
-                NomeView = "HistoricoEvento",
+                NomeView = "Usuario",
                 UsuarioEmail = ObterUsuarioSession(),
                 UsuarioNome = ObterUsuarioNomeSession()
             });

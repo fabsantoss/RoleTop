@@ -8,6 +8,7 @@ namespace RoleTopMVC.Models
         public string Telefone{get;set;}
         public string Senha{get;set;}
         public string Email{get;set;}
+        public string ConfirmaSenha {get;set;}
 
         public DateTime DataNascimento {get;set;}
 
@@ -18,12 +19,13 @@ namespace RoleTopMVC.Models
 
         }
 
-        public Cliente(string nome, string telefone, string Senha, string email, DateTime dataNascimento)
+        public Cliente(string nome, string telefone, string senha, string email, string confirmaSenha, DateTime dataNascimento)
         {
             this.Nome = nome;
-            this.Telefone = telefone;
-            this.Senha = Senha;
             this.Email = email;
+            this.Senha = senha;
+            this.ConfirmaSenha = confirmaSenha;
+            this.Telefone = telefone;
             this.DataNascimento = dataNascimento;
         }
     }

@@ -71,6 +71,45 @@ namespace RoleTopMVC.Repositories
         }
 //Colocar a parte de atualizar//
 //NAO esuqecer de terminar//
+
+        public Evento ObterPor(ulong id)
+        {
+            var eventoTotais = ObterTodos();
+            foreach (var evento in eventoTotais)
+            {
+                if (id.Equals(evento.Id))
+                {
+                    return evento;
+                }
+            }
+            return null;
+        }
+
+        public bool Atualizar(Evento evento)
+        {
+            var eventoTotais = File.ReadAllLines(PATH);
+            var eventoCSV = PrepararEventoCSV(evento);
+            var linhaEvento = -1;
+            var resultado = false;
+
+            for (int i = 0; i < eventoTotais.Length; i++)
+            {
+                var idConvertido = ulong.Parse(ExtrairValorDoCampo("id", eventoTotais[i]));
+                if (evento.Id.Equals(idConvertido))
+                {
+                    linhaEvento = i;
+                    resultado = true;
+                    break;
+                }
+            }
+
+            if (resultado)
+            {
+                eventoTotais[linhaEvento] = eventoCSV;
+                File.WriteAllLines(PATH, eventoTotais);
+            }
+            return resultado;
+        }
         private string PrepararEventoCSV (Evento evento)
         {
             Cliente c = evento.Cliente;
