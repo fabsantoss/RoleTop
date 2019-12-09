@@ -2996,11 +2996,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\52655460812\\Documents\\RoleTopMVC\\Views\\Contato\\Info.cshtml",
-      "TargetPath": "Views\\Contato\\Info.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\52655460812\\Documents\\RoleTopMVC\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
@@ -3013,6 +3008,11 @@
     {
       "FilePath": "c:\\Users\\52655460812\\Documents\\RoleTopMVC\\Views\\Administrador\\Dashboard.cshtml",
       "TargetPath": "Views\\Administrador\\Dashboard.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\52655460812\\Documents\\RoleTopMVC\\Views\\Contato\\contato.cshtml",
+      "TargetPath": "Views\\Contato\\contato.cshtml",
       "FileKind": "mvc"
     },
     {

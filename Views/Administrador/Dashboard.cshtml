@@ -23,35 +23,16 @@
                                 </tr>
                             </tfoot>
                             <tbody>
+                            @foreach (var evento in Model.Eventos)
+                            {
                                 <tr>
-                                    <td>Matheus Barbosa</td>
-                                    <td>Som e Iluminação </td>                   
-                                    <td>16/10/2019</td>
-                                    <td>18:30</td>
-                                    <td>Show </td>
-                                    <td><a href="#"><i class="fas fa-check"></i></a></td>
-                                    <td><a href="#"><i class="fas fa-times"></i></a></td>
+                                    <td>@evento.Cliente.Nome</td>
+                                    <td>@evento.TiposDeEvento.Nome</td>
+                                    <td>@evento.ServicosAdicionais.Nome</td>
+                                    <td><a href='@Url.Action("Confirma evento", "Evento", new {id = @evento.Id})'><i class="fas fa-check"></i></a></td>
+                                    <td><a href='@Url.Action("Cancelar evento", "Evento", new {id = @evento.Id})'><i class="fas fa-times"></i></a></td>
                                 </tr>
-
-                                <tr>
-                                    <td>Fernanda Oliveira</td>
-                                    <td>Som</td>
-                                    <td>20/11/2019</td>
-                                    <td>7:21</td>
-                                    <td>Anivérsario </td>
-                                    <td><a href="#"><i class="fas fa-check"></i></a></td>
-                                    <td><a href="#"><i class="fas fa-times"></i></a></td>
-                                </tr>
-                                
-                                <tr>
-                                <td>Carlos Gonçalves</td>
-                                <td>Iluminação</td>
-                                <td>12/10/2019</td>
-                                <td>19:00</td>
-                                <td>Corporativo </td>
-                                <td><a href="#"><i class="fas fa-check"></i></a></td>
-                                <td><a href="#"><i class="fas fa-times"></i></a></td>
-                            </tr>
+                            }
                             </tbody>
                         </table>
                     </section>

@@ -3,9 +3,9 @@ using RoleTopMVC.ViewModels;
 
 namespace RoleTopMVC.Controllers
 {
-    public class ContatoController :Controller
+    public class ContatoController : Controller
     {
-        public IActionResult info()
+        public IActionResult contato()
         {
             return View(new BaseViewModel()
             {

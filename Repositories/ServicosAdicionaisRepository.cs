@@ -6,7 +6,7 @@ namespace RoleTopMVC.Repositories
 {
     public class ServicosAdicionaisRepository
     {
-        private const string PATH = "Database/ServicosAdiconais";
+        private const string PATH = "Database/ServicosAdiconais.csv";
 
         public double ObterPrecoDe(string nomeServicosAdiconais)
         {
@@ -31,7 +31,7 @@ namespace RoleTopMVC.Repositories
         foreach (var linha in linhas)
         {
             ServicosAdicionais sa = new ServicosAdicionais();
-            string[] dados = linha.Split(",");
+            string[] dados = linha.Split(";");
             sa.Nome = dados[0];
             sa.Preco = double.Parse(dados[1]);
             ServicosAdicionais.Add(sa);

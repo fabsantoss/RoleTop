@@ -10,24 +10,32 @@
                             </div>
                             <br />
                         
-            <form method="POST" action='@Url.Action("Registrar", "Cliente")'>
+            <form method="POST" action='@Url.Action("Registrar", "Usuario")'>
 
+                
                 <div>
-                    <label for="data do evento">data do evento </label>
+                    <label for="data do evento">Data do evento: </label>
                     <br />
-                    <input id="data do evento" type="date"/>
+                    <input id="data do evento" type="date" name="data_evento"/>
                 </div>
-                <br />
+    
+                <div>
+                    <label for="horario">Horário: </label>
+                    <br />
+                    <input id="data do evento" type="time" name="horario"/>
+                </div>
 
-                <label for="Tipo de eventos">Tipo de eventos</label>
+                <label for="Tipo de eventos">Tipo de evento:</label>
                 <br />
-                    <select id='select' name='select'>
+                    <select id='tiposDeEvento' name="tiposDeEvento">
                     <option value="" disabled selected>Selecione</option>
-                    </select>  
                     @foreach (var tiposDeEvento in Model.TiposDeEventos)
                     {
-                        <option value="@tiposDeEvento.Nome">@tiposDeEvento.Nome por @tiposDeEvento.Preco</option>
+                        <option value=@tiposDeEvento.Nome>@tiposDeEvento.Nome por @tiposDeEvento.Preco
+
+                        </option>
                     }
+                    </select>  
                     
                 
                 <br />
@@ -49,14 +57,18 @@
                     <label for="Serviços adicionais">Serviços adicionais:</label> 
                     <br />
 
-                <select id='select' name='select'>
+                <select id="servicosAdiconais" name="servicosAdiconais">
                     <option value="" disabled selected>Selecione</option>
                     @foreach (var servicosAdicionais in Model.ServicosAdicionais)
                     {
-                        <option value="@servicosAdicionais.Nome">@servicosAdicionais.Nome por @servicosAdicionais</option>
+                        <option value=@servicosAdicionais.Nome>@servicosAdicionais.Nome por @servicosAdicionais.Preco
+
+                        </option>
                     }
-                                            
                     </select>  
+                    <br />
+                    <br />
+                    <input type="submit" value="Finalizar Cadastro do evento">
 
 
             </form>

@@ -17,7 +17,9 @@ namespace RoleTopMVC.Models
         public ServicosAdicionais ServicosAdicionais {get;set;}
         public DateTime DataEvento {get;set;}
 
-        public string DataDoEvento {get;set;}
+        public DateTime DataDoEvento {get;set;}
+
+        public DateTime Horario{get;set;}
 
         public string DescricaoEvento {get;set;}
 

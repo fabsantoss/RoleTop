@@ -62,6 +62,8 @@ namespace RoleTopMVC.Repositories
                 evento.ServicosAdicionais.Nome =ExtrairValorDoCampo("servicos_adicionais_nome",linha);
                 evento.ServicosAdicionais.Preco =double.Parse(ExtrairValorDoCampo("servicos_adicionais_preco", linha));
                 evento.DataEvento = DateTime.Parse(ExtrairValorDoCampo("data_evento",linha));
+                evento.DataDoEvento= DateTime.Parse(ExtrairValorDoCampo("data_do_evento",linha));
+                evento.Horario= DateTime.Parse(ExtrairValorDoCampo("horario",linha));
                 evento.DescricaoEvento = ExtrairValorDoCampo("descrição_evento",linha);
                 evento.FormaDePagamento = ExtrairValorDoCampo("forma_de_pagamento",linha);
                 
@@ -118,7 +120,7 @@ namespace RoleTopMVC.Repositories
 
 
 
-            return $"id={evento.Id};status_evento={evento.Status};cliente_nome={c.Nome};cliente_telefone={c.Telefone};cliente_email={c.Email};evento_nome={evento.Nome};tipos_de _evento_nome={evento.TiposDeEvento.Nome};tipos_de _evento_precos={evento.TiposDeEvento.Preco}ervicos_adicionais_nome={evento.ServicosAdicionais.Nome};servicos_adicionais_preco{evento.ServicosAdicionais.Preco}data_evento={evento.DataEvento};descrição_evento={evento.DescricaoEvento};forma_de_pagamento={evento.FormaDePagamento}";
+            return $"id={evento.Id};status_evento={evento.Status};cliente_nome={c.Nome};cliente_telefone={c.Telefone};cliente_email={c.Email};evento_nome={evento.Nome};tipos_de _evento_nome={evento.TiposDeEvento.Nome};tipos_de _evento_precos={evento.TiposDeEvento.Preco}servicos_adicionais_nome={evento.ServicosAdicionais.Nome};servicos_adicionais_preco={evento.ServicosAdicionais.Preco}data_evento={evento.DataEvento};data_do_evento={evento.DataDoEvento};horario={evento.Horario};descrição_evento={evento.DescricaoEvento};forma_de_pagamento={evento.FormaDePagamento}";
         }
 
         

@@ -6,7 +6,7 @@ namespace RoleTopMVC.Repositories
 {
     public class TiposDeEventoRepository
     {
-        private const string PATH = "Database/TiposDeEvento";
+        private const string PATH = "Database/TiposDeEvento.csv";
 
         public double ObterPrecoDe(string nomeTipoDeEvento)
         {
@@ -31,7 +31,7 @@ namespace RoleTopMVC.Repositories
         foreach (var linha in linhas)
         {
             TiposDeEvento tde = new TiposDeEvento();
-            string[] dados = linha.Split(",");
+            string[] dados = linha.Split(";");
             tde.Nome = dados[0];
             tde.Preco = double.Parse(dados[1]);
             tiposDeEventos.Add(tde);

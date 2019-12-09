@@ -15,8 +15,6 @@ namespace RoleTopMVC.Controllers
 
             if (!ninguemLogado && (uint) TiposUsuario.ADMINISTRADOR == uint.Parse(ObterUsuariotipoSession()))
             {
-                
-            
 
             var eventos = eventosRepository.ObterTodos();
             DashboardViewModel dashboardViewModel = new DashboardViewModel();
