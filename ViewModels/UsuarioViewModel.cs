@@ -1,12 +1,14 @@
 using System.Collections.Generic;
 using RoleTopMVC.Models;
+using RoleTopMVC.ViewModels;
 
 namespace RoleTopMVC.ViewModels
 {
     public class UsuarioViewModel : BaseViewModel
     {
         public List<Evento> Eventos {get;set;}
-        public List<TiposDeEvento> TiposDeEventos {get;set;}
+
+        public List<TiposDeEvento> TiposDeEventos{get;set;}
 
         public List<ServicosAdicionais> ServicosAdicionais {get;set;}
         public Cliente cliente {get;set;}

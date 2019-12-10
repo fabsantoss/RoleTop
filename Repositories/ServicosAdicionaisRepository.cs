@@ -26,7 +26,7 @@ namespace RoleTopMVC.Repositories
         public List<ServicosAdicionais> ObterTodos()
     {
         List<ServicosAdicionais> ServicosAdicionais = new List<ServicosAdicionais>();
-
+        
         string[] linhas = File.ReadAllLines(PATH);
         foreach (var linha in linhas)
         {

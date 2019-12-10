@@ -52,13 +52,13 @@ namespace RoleTopMVC.Repositories
                 Evento evento = new Evento();
 
                 evento.Id = ulong.Parse(ExtrairValorDoCampo("id", linha));
-                evento.Status = uint.Parse(ExtrairValorDoCampo("satatus", linha));
+                evento.Status = uint.Parse(ExtrairValorDoCampo("status", linha));
                 evento.Cliente.Nome = ExtrairValorDoCampo("cliente_nome", linha);
                 evento.Cliente.Telefone = ExtrairValorDoCampo("cliente_telefone", linha);
                 evento.Cliente.Email = ExtrairValorDoCampo("cliente_email", linha);
                 evento.Nome = ExtrairValorDoCampo("nome", linha);
-                evento.TiposDeEvento.Preco = double.Parse(ExtrairValorDoCampo("tipos_de _evento_preco", linha));
-                evento.TiposDeEvento.Nome = ExtrairValorDoCampo("tipos_de _evento_nome", linha);
+                evento.TiposDeEvento.Preco = double.Parse(ExtrairValorDoCampo("tipos_de_evento_preco", linha));
+                evento.TiposDeEvento.Nome = ExtrairValorDoCampo("tipos_de_evento_nome", linha);
                 evento.ServicosAdicionais.Nome =ExtrairValorDoCampo("servicos_adicionais_nome",linha);
                 evento.ServicosAdicionais.Preco =double.Parse(ExtrairValorDoCampo("servicos_adicionais_preco", linha));
                 evento.DataEvento = DateTime.Parse(ExtrairValorDoCampo("data_evento",linha));
@@ -71,8 +71,7 @@ namespace RoleTopMVC.Repositories
             }
             return eventos;
         }
-//Colocar a parte de atualizar//
-//NAO esuqecer de terminar//
+
 
         public Evento ObterPor(ulong id)
         {
@@ -120,7 +119,7 @@ namespace RoleTopMVC.Repositories
 
 
 
-            return $"id={evento.Id};status_evento={evento.Status};cliente_nome={c.Nome};cliente_telefone={c.Telefone};cliente_email={c.Email};evento_nome={evento.Nome};tipos_de _evento_nome={evento.TiposDeEvento.Nome};tipos_de _evento_precos={evento.TiposDeEvento.Preco}servicos_adicionais_nome={evento.ServicosAdicionais.Nome};servicos_adicionais_preco={evento.ServicosAdicionais.Preco}data_evento={evento.DataEvento};data_do_evento={evento.DataDoEvento};horario={evento.Horario};descrição_evento={evento.DescricaoEvento};forma_de_pagamento={evento.FormaDePagamento}";
+            return $"id={evento.Id};status={evento.Status};cliente_nome={c.Nome};cliente_telefone={c.Telefone};cliente_email={c.Email};nome={evento.Nome};tipos_de_evento_nome={t.Nome};tipos_de_evento_precos={t.Preco}servicos_adicionais_nome={s.Nome};servicos_adicionais_preco={s.Preco};data_evento={evento.DataEvento};data_do_evento={evento.DataDoEvento};horario={evento.Horario};descrição_evento={evento.DescricaoEvento};forma_de_pagamento={evento.FormaDePagamento};";
         }
 
         

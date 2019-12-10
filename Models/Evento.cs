@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using RoleTopMVC.Enums;
 
 namespace RoleTopMVC.Models
@@ -33,12 +32,9 @@ namespace RoleTopMVC.Models
     public Evento()
     {
         this.Cliente = new  Cliente();
-        this.TiposDeEvento =  TiposDeEvento;
+        this.TiposDeEvento = new  TiposDeEvento();
         this.Id = 0 ;
-        this.DataDoEvento =  DataDoEvento;
-        this.DescricaoEvento = DescricaoEvento;
-        this.FormaDePagamento = FormaDePagamento;
-        this.ServicosAdicionais = ServicosAdicionais;
+        this.ServicosAdicionais = new ServicosAdicionais();
         this.Status = (uint) StatusEvento.PENDENTE;
         
     }

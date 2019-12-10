@@ -17,6 +17,7 @@ namespace RoleTopMVC.Controllers
             {
 
             var eventos = eventosRepository.ObterTodos();
+            
             DashboardViewModel dashboardViewModel = new DashboardViewModel();
             
             foreach (var evento in eventos)

@@ -56,13 +56,13 @@ namespace RoleTopMVC.Controllers
                     ViewData["Action"] = "Usuario";
                     Evento evento = new Evento();
 
-                    var nomeServicosAdicionais = form["servicos_Adiconais"];
-                    ServicosAdicionais servicosAdicionais = new ServicosAdicionais();
+                    var nomeServicosAdicionais = form["servicosAdiconais"];
+                    ServicosAdicionais servicosAdicionais = new ServicosAdicionais(nomeServicosAdicionais, servicosAdicionaisRepository.ObterPrecoDe(nomeServicosAdicionais));
 
                     evento.ServicosAdicionais = servicosAdicionais;
 
-                    var nomeTiposDeEvento = form["Tipos_De_Evento"];
-                    TiposDeEvento tiposDeEvento = new TiposDeEvento();
+                    var nomeTiposDeEvento = form["tiposDeEvento"];
+                    TiposDeEvento tiposDeEvento = new TiposDeEvento(nomeTiposDeEvento,tiposDeEventoRepository.ObterPrecoDe(nomeTiposDeEvento));
 
                     evento.TiposDeEvento = tiposDeEvento;
 
@@ -95,13 +95,19 @@ namespace RoleTopMVC.Controllers
                 {
                     var evento = eventoRepository.ObterPor(id);
                     evento.Status = (uint) StatusEvento.APROVADO;
+                    
                     if (eventoRepository.Atualizar(evento))
                     {
                         return RedirectToAction("Dashboard", "Administrador");
                     }
                     else
                     {
-                        return View("Erro", new RespostaViewModel("Não foi possivel aprovar o cadastro desse evento"));
+                        return View("Erro", new RespostaViewModel("Não foi possivel aprovar o cadastro desse evento")
+                        {
+                            NomeView = "Dashboard",
+                            UsuarioEmail = ObterUsuarioSession(),
+                            UsuarioNome = ObterUsuarioNomeSession()
+                        });
                     }
                 }
 

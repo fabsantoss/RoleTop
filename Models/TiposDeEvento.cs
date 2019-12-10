@@ -2,7 +2,7 @@ using System;
 
 namespace RoleTopMVC.Models
 {
-    public class TiposDeEvento : Evento
+    public class TiposDeEvento  : Produto
     {
     
     public TiposDeEvento()
