@@ -6,7 +6,7 @@ namespace RoleTopMVC.Repositories
 {
     public class ServicosAdicionaisRepository
     {
-        private const string PATH = "Database/ServicosAdiconais.csv";
+        private const string PATH = "Database/ServicosAdicionais.csv";
 
         public double ObterPrecoDe(string nomeServicosAdiconais)
         {
@@ -24,19 +24,18 @@ namespace RoleTopMVC.Repositories
         }
 
         public List<ServicosAdicionais> ObterTodos()
-    {
-        List<ServicosAdicionais> ServicosAdicionais = new List<ServicosAdicionais>();
-        
-        string[] linhas = File.ReadAllLines(PATH);
-        foreach (var linha in linhas)
         {
-            ServicosAdicionais sa = new ServicosAdicionais();
-            string[] dados = linha.Split(";");
-            sa.Nome = dados[0];
-            sa.Preco = double.Parse(dados[1]);
-            ServicosAdicionais.Add(sa);
+            List<ServicosAdicionais> servicosAdicionais =  new List<ServicosAdicionais>();
+            string[] linhas = File.ReadAllLines(PATH);
+            foreach (var item in linhas)
+            {
+                ServicosAdicionais  sa = new ServicosAdicionais();
+                string[] dados = item.Split(";");
+                sa.Nome = dados[0];
+                sa.Preco = double.Parse(dados[1]);
+                servicosAdicionais.Add(sa);
+            }
+            return servicosAdicionais;
         }
-        return ServicosAdicionais;
-    }
     }
 }

@@ -7,7 +7,7 @@ namespace RoleTopMVC.Controllers
 {
     public class AdministradorController : AbstratcController
     {
-        EventoRepository eventosRepository = new EventoRepository();
+        EventoRepository eventoRepository = new EventoRepository();
 
         public IActionResult Dashboard()
         {
@@ -16,7 +16,7 @@ namespace RoleTopMVC.Controllers
             if (!ninguemLogado && (uint) TiposUsuario.ADMINISTRADOR == uint.Parse(ObterUsuariotipoSession()))
             {
 
-            var eventos = eventosRepository.ObterTodos();
+            var eventos = eventoRepository.ObterTodos();
             
             DashboardViewModel dashboardViewModel = new DashboardViewModel();
             

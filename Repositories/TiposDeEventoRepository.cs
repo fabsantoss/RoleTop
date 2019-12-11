@@ -8,13 +8,13 @@ namespace RoleTopMVC.Repositories
     {
         private const string PATH = "Database/TiposDeEvento.csv";
 
-        public double ObterPrecoDe(string nomeTipoDeEvento)
+        public double ObterPrecoDe(string nomeTiposDeEvento)
         {
             var lista = ObterTodos();
             var preco = 0.0;
             foreach (var item in lista)
             {
-                if (item.Nome.Equals(nomeTipoDeEvento))
+                if (item.Nome.Equals(nomeTiposDeEvento))
                 {
                     preco = item.Preco;
                     break;
@@ -23,9 +23,9 @@ namespace RoleTopMVC.Repositories
             return preco;
         }
 
-    public List<TiposDeEvento> ObterTodos()
+    public List<TiposDeEvento>  ObterTodos()
     {
-        List<TiposDeEvento> tiposDeEventos = new List<TiposDeEvento>();
+        List<TiposDeEvento> tiposDeEvento = new List<TiposDeEvento>();
 
         string[] linhas = File.ReadAllLines(PATH);
         foreach (var linha in linhas)
@@ -34,9 +34,9 @@ namespace RoleTopMVC.Repositories
             string[] dados = linha.Split(";");
             tde.Nome = dados[0];
             tde.Preco = double.Parse(dados[1]);
-            tiposDeEventos.Add(tde);
+            tiposDeEvento.Add(tde);
         }
-        return tiposDeEventos;
+        return tiposDeEvento;
     }
     }
 }

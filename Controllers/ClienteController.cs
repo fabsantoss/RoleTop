@@ -13,6 +13,10 @@ namespace RoleTopMVC.Controllers
 
             private EventoRepository eventoRepository = new EventoRepository();
 
+            private ServicosAdicionaisRepository servicosAdicionaisRepository = new ServicosAdicionaisRepository();
+
+            private TiposDeEventoRepository tiposDeEventoRepository = new TiposDeEventoRepository();
+
         [HttpGet]
         public IActionResult Login()
         {
@@ -82,10 +86,14 @@ namespace RoleTopMVC.Controllers
         {
             var emailCliente = HttpContext.Session.GetString(SESSION_CLIENTE_EMAIL);
             var eventosCliente = eventoRepository.ObterTodosPorCliente(emailCliente);
+            var servicosAdiconais = servicosAdicionaisRepository.ObterTodos();
+            var tiposDeEvento = tiposDeEventoRepository.ObterTodos();
 
             return View (new UsuarioViewModel()
             {
                 Eventos = eventosCliente,
+                ServicosAdicionais = servicosAdiconais,
+                TiposDeEventos = tiposDeEvento,
                 NomeView = "Usuario",
                 UsuarioEmail = ObterUsuarioSession(),
                 UsuarioNome = ObterUsuarioNomeSession()

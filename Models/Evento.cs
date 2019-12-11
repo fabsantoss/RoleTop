@@ -32,10 +32,10 @@ namespace RoleTopMVC.Models
     public Evento()
     {
         this.Cliente = new  Cliente();
-        this.TiposDeEvento = new  TiposDeEvento();
         this.Id = 0 ;
-        this.ServicosAdicionais = new ServicosAdicionais();
         this.Status = (uint) StatusEvento.PENDENTE;
+        this.TiposDeEvento = new  TiposDeEvento();
+        this.ServicosAdicionais = new ServicosAdicionais();
         
     }
 

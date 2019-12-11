@@ -88,14 +88,14 @@ namespace RoleTopMVC.Repositories
 
         public bool Atualizar(Evento evento)
         {
-            var eventoTotais = File.ReadAllLines(PATH);
+            var eventosTotais = File.ReadAllLines(PATH);
             var eventoCSV = PrepararEventoCSV(evento);
             var linhaEvento = -1;
             var resultado = false;
 
-            for (int i = 0; i < eventoTotais.Length; i++)
+            for (int i = 0; i < eventosTotais.Length; i++)
             {
-                var idConvertido = ulong.Parse(ExtrairValorDoCampo("id", eventoTotais[i]));
+                var idConvertido = ulong.Parse(ExtrairValorDoCampo("id", eventosTotais[i]));
                 if (evento.Id.Equals(idConvertido))
                 {
                     linhaEvento = i;
@@ -106,8 +106,8 @@ namespace RoleTopMVC.Repositories
 
             if (resultado)
             {
-                eventoTotais[linhaEvento] = eventoCSV;
-                File.WriteAllLines(PATH, eventoTotais);
+                eventosTotais[linhaEvento] = eventoCSV;
+                File.WriteAllLines(PATH, eventosTotais);
             }
             return resultado;
         }
@@ -119,7 +119,7 @@ namespace RoleTopMVC.Repositories
 
 
 
-            return $"id={evento.Id};status={evento.Status};cliente_nome={c.Nome};cliente_telefone={c.Telefone};cliente_email={c.Email};nome={evento.Nome};tipos_de_evento_nome={t.Nome};tipos_de_evento_precos={t.Preco}servicos_adicionais_nome={s.Nome};servicos_adicionais_preco={s.Preco};data_evento={evento.DataEvento};data_do_evento={evento.DataDoEvento};horario={evento.Horario};descrição_evento={evento.DescricaoEvento};forma_de_pagamento={evento.FormaDePagamento};";
+            return $"id={evento.Id};status={evento.Status};cliente_nome={c.Nome};cliente_telefone={c.Telefone};cliente_email={c.Email};nome={evento.Nome};tipos_de_evento_preco={t.Preco};tipos_de_evento_nome={t.Nome};servicos_adicionais_nome={s.Nome};servicos_adicionais_preco={s.Preco};data_evento={evento.DataEvento};data_do_evento={evento.DataDoEvento};horario={evento.Horario};descrição_evento={evento.DescricaoEvento};forma_de_pagamento={evento.FormaDePagamento};";
         }
 
         
