@@ -53,10 +53,8 @@ namespace RoleTopMVC.Repositories
 
                 evento.Id = ulong.Parse(ExtrairValorDoCampo("id", linha));
                 evento.Status = uint.Parse(ExtrairValorDoCampo("status", linha));
-                evento.Cliente.Nome = ExtrairValorDoCampo("cliente_nome", linha);
-                evento.Cliente.Telefone = ExtrairValorDoCampo("cliente_telefone", linha);
                 evento.Cliente.Email = ExtrairValorDoCampo("cliente_email", linha);
-                evento.Nome = ExtrairValorDoCampo("nome", linha);
+                evento.Cliente.Nome = ExtrairValorDoCampo("nome", linha);
                 evento.TiposDeEvento.Preco = double.Parse(ExtrairValorDoCampo("tipos_de_evento_preco", linha));
                 evento.TiposDeEvento.Nome = ExtrairValorDoCampo("tipos_de_evento_nome", linha);
                 evento.ServicosAdicionais.Nome =ExtrairValorDoCampo("servicos_adicionais_nome",linha);
@@ -119,7 +117,7 @@ namespace RoleTopMVC.Repositories
 
 
 
-            return $"id={evento.Id};status={evento.Status};cliente_nome={c.Nome};cliente_telefone={c.Telefone};cliente_email={c.Email};nome={evento.Nome};tipos_de_evento_preco={t.Preco};tipos_de_evento_nome={t.Nome};servicos_adicionais_nome={s.Nome};servicos_adicionais_preco={s.Preco};data_evento={evento.DataEvento};data_do_evento={evento.DataDoEvento};horario={evento.Horario};descrição_evento={evento.DescricaoEvento};forma_de_pagamento={evento.FormaDePagamento};";
+            return $"id={evento.Id};status={evento.Status};cliente_email={c.Email};nome={c.Nome};tipos_de_evento_preco={t.Preco};tipos_de_evento_nome={t.Nome};servicos_adicionais_nome={s.Nome};servicos_adicionais_preco={s.Preco};data_evento={evento.DataEvento};data_do_evento={evento.DataDoEvento};horario={evento.Horario};descrição_evento={evento.DescricaoEvento};forma_de_pagamento={evento.FormaDePagamento};";
         }
 
         

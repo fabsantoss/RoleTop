@@ -27,9 +27,7 @@
                                     <th rowspan="2">Tipo de evento</th>
                                     <th rowspan="2">Data do evento</th>
                                     <th rowspan="2">Horário</th>
-
                                     <th colspan="2" rowspan="2">Aprovar evento</th>
-                                    
                                 </tr>
                             </thead>
                             <tfoot>
@@ -46,8 +44,10 @@
                                     <td>@evento.Cliente.Nome</td>
                                     <td>@evento.TiposDeEvento.Nome</td>
                                     <td>@evento.ServicosAdicionais.Nome</td>
-                                    <td><a href='@Url.Action("Aprovar Usuario",  new {id = @evento.Id})'><i class="fas fa-check"></i></a></td>
-                                    <td><a href='@Url.Action("Reprovar Usuario",  new {id = @evento.Id})'><i class="fas fa-times"></i></a></td>
+                                    <td>@evento.DataDoEvento</td>
+                                    <td>@evento.Horario</td>
+                                    <td><a href='@Url.Action("Aprovar", "Usuario", new {id = @evento.Id})'><i class="fas fa-check"></i></a></td>
+                                    <td><a href='@Url.Action("Reprovar", "Usuario", new {id = @evento.Id})'><i class="fas fa-times"></i></a></td>
                                 </tr>
                             }
                             </tbody>

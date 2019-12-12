@@ -88,6 +88,7 @@ namespace RoleTopMVC.Controllers
             var eventosCliente = eventoRepository.ObterTodosPorCliente(emailCliente);
             var servicosAdiconais = servicosAdicionaisRepository.ObterTodos();
             var tiposDeEvento = tiposDeEventoRepository.ObterTodos();
+            var cliente = clienteRepository.ObterPor(emailCliente);
 
             return View (new UsuarioViewModel()
             {

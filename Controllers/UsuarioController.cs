@@ -56,6 +56,14 @@ namespace RoleTopMVC.Controllers
                     ViewData["Action"] = "Usuario";
                     Evento evento = new Evento();
 
+                    var descricao = form["descricao"];
+
+                    var horario = form["horario"];
+
+                    var data_evento = form["data_evento"];
+
+                    var forma_de_pagamento = form["forma_de_pagamento"];
+
                     var nomeServicosAdicionais = form["servicosAdiconais"];
                     ServicosAdicionais servicosAdicionais = new ServicosAdicionais(nomeServicosAdicionais, servicosAdicionaisRepository.ObterPrecoDe(nomeServicosAdicionais));
 
@@ -64,6 +72,8 @@ namespace RoleTopMVC.Controllers
                     var nomeTiposDeEvento = form["tiposDeEvento"];
                     TiposDeEvento tiposDeEvento = new TiposDeEvento(nomeTiposDeEvento,tiposDeEventoRepository.ObterPrecoDe(nomeTiposDeEvento));
 
+                    
+
                     evento.TiposDeEvento = tiposDeEvento;
 
                     Cliente cliente = new Cliente(){
@@ -71,6 +81,14 @@ namespace RoleTopMVC.Controllers
                         Telefone = form["telefone"],
                         Email = form["email"]
                     };
+                
+                    evento.FormaDePagamento = forma_de_pagamento;
+
+                evento.DataEvento = DateTime.Parse(data_evento);
+
+                    evento.Horario = DateTime.Parse(horario);
+
+                    evento.DescricaoEvento = descricao;
 
                     evento.Cliente = cliente;
 

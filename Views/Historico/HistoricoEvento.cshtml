@@ -20,22 +20,12 @@
             @foreach (var evento in Model.Eventos)
             {
                 <tr>
-                    <td>@evento.TiposDeEvento</td>
+                    <td>@evento.TiposDeEvento.Nome</td>
                     <td>@evento.DataDoEvento</td>
-                    <td>@evento.DescricaoEvento</td>
                     <td>@evento.FormaDePagamento</td>
-                    <td>@evento.ServicosAdicionais</td>
+                    <td>@evento.ServicosAdicionais.Nome</td>
                 </tr>
             }
         </tbody>
     </table>
 </main>
-    <footer>
-        <address>
-                Avenida de Limeira, 539 - Campos Elíseos - SP
-                <br/>
-                11 1234 6789
-                <br />
-        </address>
-        <a href="#"> Voltar para o topo !</a>
-    </footer>

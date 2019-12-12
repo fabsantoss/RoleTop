@@ -12,7 +12,7 @@
                         
             <form method="POST" action='@Url.Action("Registrar", "Usuario")'>
 
-                
+
                 <div>
                     <label for="data do evento">Data do evento: </label>
                     <br />
@@ -44,15 +44,9 @@
                     <textarea name="descricao" id="descricao" cols="10" rows="5"  placeholder="Descrição do evento"  style="width: 20em "></textarea>
                     <br /> 
             
-
-                <label for="Forma de paagamento">Forma de pagamento:</label>
-                <br />
-                <select id='select' name='select'>
-                    <option value=''>Selecione</option>
-                    <option value='div1'>Débito</option>
-                    <option value='div2'>Crédito</option>
-                    <option value='div3'>Boleto bancário</option>                                       
-                    </select>  
+                    <label for="forma_de_pagamento">Forma de paagamento:</label>
+                    <br/>
+                    <textarea name="forma_de_pagamento" id="forma_de_pagamento" cols="3" rows="2"  placeholder="Forma de pagamento"  style="width: 10em "></textarea>
                     <br />
                     <label for="Serviços adicionais">Serviços adicionais:</label> 
                     <br />
@@ -70,15 +64,5 @@
                     <br />
                     <input type="submit" value="Finalizar Cadastro do evento">
 
-
             </form>
                 </main>
-            <footer>
-        <address>
-                Avenida de Limeira, 539 - Campos Elíseos - SP
-                <br/>
-                11 1234 6789
-                <br />
-        </address>
-        <a href="#"> Voltar para o topo !</a>
-    </footer>
