@@ -1,1 +1,2 @@
-tipo_usuario=1;nome=fabiane;email=fabiane@gmail.com;senha=fabi123;confirma_senha=fabi123;telefone=999999;data_nascimento=12/12/2019 00:00:00;
+tipo_usuario=0;nome=adm;email=adm@gmail.com;senha=adm123;confirma_senha=adm123;telefone=1111111111111;data_nascimento=13/12/2019 00:00:00;
+tipo_usuario=1;nome=fabiane;email=fabiane@gmail.com;senha=fabi123;confirma_senha=fabi123;telefone=999999;data_nascimento=13/08/2007 00:00:00;

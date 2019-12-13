@@ -5,13 +5,22 @@
 <main>
                     <h2>Minha Conta!</h2>
                         <br />
-                        <div class="meu evento">
-                                <a href="meuevento.html#meu evento">Meu evento</a>
-                            </div>
+    
                             <br />
                         
             <form method="POST" action='@Url.Action("Registrar", "Usuario")'>
 
+                <div>
+                    <label form="nome">Nome completo:</label>
+                    <br>
+                    <input id="nome" type="text" maxlength="20" minlength="6" value="@Model.Cliente.Nome" name="nome">
+                </div>
+
+                <div>
+                    <label for="email">E-mail:</label>
+                    <br />
+                    <input id="email" type="text" name="email" />
+                    </div>
 
                 <div>
                     <label for="data do evento">Data do evento: </label>
@@ -65,4 +74,33 @@
                     <input type="submit" value="Finalizar Cadastro do evento">
 
             </form>
+            <br>
+            <br>
+            <h2>Historico dos meus eventos</h2>
+            <table>
+        <thead>
+            <tr>
+                <th>Tipos De Evento</th>
+                <th>Serviços Adicionais</th>
+                <th>Data do Evento</th>
+                <th>Horário</th>
+                <th>Descrição do Evento</th>
+                <th>Forma de Pagamento</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach( var evento in Model.Eventos)
+            {
+                <tr>
+                    <td>@evento.TiposDeEvento.Nome</td>
+                    <td>@evento.ServicosAdicionais.Nome</td>
+                    <td>@evento.DataDoEvento</td>
+                    <td>@evento.Horario</td>
+                    <td>@evento.DescricaoEvento</td>
+                    <td>@evento.FormaDePagamento</td>
+                </tr>
+            }
+        </tbody>
+    </table>
                 </main>
+        

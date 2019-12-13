@@ -17,39 +17,40 @@ namespace RoleTopMVC.Controllers
 
         public IActionResult Usuario() 
         {
-            EventoViewModel evm = new EventoViewModel();
-            evm.TiposDeEvento = tiposDeEventoRepository.ObterTodos();
+            UsuarioViewModel uvm = new UsuarioViewModel();
+            uvm.TiposDeEventos = tiposDeEventoRepository.ObterTodos();
             
             var UsuarioEmail = ObterUsuarioSession();
             if (!string.IsNullOrEmpty(UsuarioEmail))
             {
-                evm.cliente = clienteRepository.ObterPor(UsuarioEmail);
+                uvm.Cliente = clienteRepository.ObterPor(UsuarioEmail);
             }
 
             var nomeUsuario = ObterUsuarioNomeSession();
             if (!string.IsNullOrEmpty(nomeUsuario))
             {
-                evm.NomeCliente = nomeUsuario;
+                uvm.NomeCliente = nomeUsuario;
             }
 
             var usuarioLogado = ObterUsuarioSession();
             var nomeUsuarioLogado = ObterUsuarioNomeSession();
             if (!string.IsNullOrEmpty(nomeUsuarioLogado))
             {
-                evm.NomeCliente = nomeUsuarioLogado;
+                uvm.NomeCliente = nomeUsuarioLogado;
             }
             
             var clienteLogado = clienteRepository.ObterPor(usuarioLogado);
             if (clienteLogado != null)
             {
-                evm.cliente = clienteLogado;
+                uvm.Cliente = clienteLogado;
+                uvm.Eventos = eventoRepository.ObterTodosPorCliente(UsuarioEmail);
             }
 
-            evm.NomeView = "Cliente";
-            evm.UsuarioEmail = ObterUsuarioSession();
-            evm.UsuarioNome = ObterUsuarioNomeSession();
+            uvm.NomeView = "Cliente";
+            uvm.UsuarioEmail = ObterUsuarioSession();
+            uvm.UsuarioNome = ObterUsuarioNomeSession();
 
-            return View (evm);
+            return View (uvm);
         }
                 public IActionResult Registrar(IFormCollection form)
                 {
@@ -84,7 +85,7 @@ namespace RoleTopMVC.Controllers
                 
                     evento.FormaDePagamento = forma_de_pagamento;
 
-                evento.DataEvento = DateTime.Parse(data_evento);
+                    evento.DataDoEvento = DateTime.Parse(data_evento);
 
                     evento.Horario = DateTime.Parse(horario);
 

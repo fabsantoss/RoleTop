@@ -17,6 +17,7 @@ namespace RoleTopMVC.ViewModels
             this.TiposDeEvento = new List<TiposDeEvento>();
             this.ServicosAdicionais = new List<ServicosAdicionais>();
             this.cliente = new Cliente();
+            this.NomeCliente = "Amigo";
         }
     }
 }

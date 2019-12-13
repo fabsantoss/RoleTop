@@ -28,7 +28,7 @@ nav {
 
 footer {
     background-color: #EE8820; 
-    
+    padding-block-start: 20em;
 }
 
 .logo {
@@ -94,7 +94,7 @@ form label {
     font-weight: bold;
 }
 
- form input[type="submit"] {
+form input[type="submit"] {
     background-color: #0000;
     border: 1px solid #0000;
     color: #000000;
@@ -103,4 +103,17 @@ form label {
     
     font-weight: bold;
     text-align: center;
- }
+}
+
+thead > tr:first-child > th:last-child {
+    padding: 0.5em;
+}
+
+table th {
+    text-align: center;
+    color: #000000;
+    border: 4px dashed #EE8820;
+    width: 70%;
+    padding: 1em;
+    word-break: normal;
+}
